@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.8.0.final using JasperReports Library version 6.8.0-2ed8dfabb690ff337a5797129f2cd92902b0c87b  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="aktuelneRezervacije" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="66c0690a-76da-4589-a440-2c5f9eb67a9e">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="Data Adapter 1"/>
+	<queryString language="SQL">
+		<![CDATA[]]>
+	</queryString>
+	<field name="let.linija.polaziste" class="java.lang.String">
+		<fieldDescription><![CDATA[let.linija.polaziste]]></fieldDescription>
+	</field>
+	<field name="let.linija.odrediste" class="java.lang.String">
+		<fieldDescription><![CDATA[let.linija.odrediste]]></fieldDescription>
+	</field>
+	<field name="let.datumPolaska" class="java.util.Date">
+		<fieldDescription><![CDATA[let.datumPolaska]]></fieldDescription>
+	</field>
+	<field name="let.linija.vrijemePolaska" class="java.sql.Time">
+		<fieldDescription><![CDATA[let.linija.vrijemePolaska]]></fieldDescription>
+	</field>
+	<field name="let.linija.vrijemeDolaska" class="java.sql.Time">
+		<fieldDescription><![CDATA[let.linija.vrijemeDolaska]]></fieldDescription>
+	</field>
+	<field name="cijena" class="java.lang.Integer"/>
+	<field name="sjediste.red" class="java.lang.Integer">
+		<fieldDescription><![CDATA[sjediste.red]]></fieldDescription>
+	</field>
+	<field name="sjediste.oznaka" class="java.lang.String">
+		<fieldDescription><![CDATA[sjediste.oznaka]]></fieldDescription>
+	</field>
+	<field name="let.linija.aerodrom1.kod" class="java.lang.String">
+		<fieldDescription><![CDATA[let.linija.aerodrom1.kod]]></fieldDescription>
+	</field>
+	<field name="let.linija.aerodrom2.kod" class="java.lang.String">
+		<fieldDescription><![CDATA[let.linija.aerodrom2.kod]]></fieldDescription>
+	</field>
+	<field name="korisnik.ime" class="java.lang.String">
+		<fieldDescription><![CDATA[korisnik.ime]]></fieldDescription>
+	</field>
+	<field name="korisnik.prezime" class="java.lang.String">
+		<fieldDescription><![CDATA[korisnik.prezime]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="101" splitType="Stretch">
+			<staticText>
+				<reportElement x="160" y="20" width="240" height="41" uuid="4500220a-06f3-4150-a123-3879d926acf8"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="18"/>
+				</textElement>
+				<text><![CDATA[Aktuelne rezervacije]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="0" y="71" width="180" height="21" uuid="d259dc9e-574e-4500-83c4-63b14c21bfcc"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{korisnik.ime}+" "+$F{korisnik.prezime} ]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="38" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="45" splitType="Stretch">
+			<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.FreeLayout"/>
+			<staticText>
+				<reportElement mode="Opaque" x="0" y="3" width="80" height="42" backcolor="#D6CECE" uuid="fed33b9b-21dd-4b8b-b3d0-2c5c389a19b8">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="b7f009dc-acd7-41ea-a92e-68bf4e8ba2c1"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[OD]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="80" y="3" width="75" height="42" backcolor="#D6CECE" uuid="53a48711-5802-427c-b5a6-005a00a39a2a">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="2dbbaa28-c40a-4860-80b0-c7351a804a4d"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[DO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="155" y="3" width="78" height="42" backcolor="#D6CECE" uuid="bbc58398-117a-4fc0-a4f5-8cf7c5bb9f98">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="2de206cd-9b51-4643-9530-10f3aeb2e1be"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[DATUM POLASKA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="233" y="3" width="95" height="42" backcolor="#D6CECE" uuid="df7d924e-49ba-44b3-9899-ccf7a84cd872">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="e2bdcd2f-7465-4a0f-ab74-f7aa3aa438f8"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[VRIJEME POLASKA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="328" y="3" width="97" height="42" backcolor="#D6CECE" uuid="783bf02c-1f53-40fc-96c6-93ce39e7b6e0">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="a35f2036-05f9-4ad7-acc8-b5394c369344"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[VRIJEME DOLASKA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="485" y="3" width="69" height="42" backcolor="#D6CECE" uuid="0dd0f077-c170-4543-bebb-a7396fb6720d">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="6d10c4a3-e4cc-40d6-869c-4e3626115650"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[CIJENA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="425" y="3" width="60" height="42" backcolor="#D6CECE" uuid="7243d6ab-791a-467a-a48d-82c9ebfd9d3a">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="9795ee01-8098-4028-8463-23bf1b0a3273"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[SJEDIŠTE]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="33" splitType="Stretch">
+			<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.FreeLayout"/>
+			<textField>
+				<reportElement x="425" y="0" width="30" height="32" uuid="17c6e581-d021-4945-9995-d8f637e5db0c">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="8e64bf74-6644-4972-a2d4-356dc8b4a3e4"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{sjediste.red}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="455" y="0" width="30" height="32" uuid="f8e8de01-8de5-494b-bd31-d9f5dccbc2fb">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="ac575db2-3267-48a7-88db-0aeff2b7d33e"/>
+				</reportElement>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{sjediste.oznaka}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="0" width="80" height="32" uuid="d5452b2d-3cb7-493e-a591-9631da9d5135">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="fefa2949-ad15-42d8-8993-ea0e7c944d46"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{let.linija.polaziste}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="80" y="0" width="75" height="32" uuid="3e54fc49-6fa0-4e6f-a1cc-4b4f9b2e7c9b">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="6cd48c70-0180-48ad-b362-f1e11b049fc0"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{let.linija.odrediste}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="155" y="0" width="78" height="32" uuid="426c9394-27b0-4f4a-a725-5450db2dcc27">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="819751d7-3716-4557-ae3e-5718fa67bbbd"/>
+				</reportElement>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.text.SimpleDateFormat("dd.MM.yyyy").format($F{let.datumPolaska})]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="233" y="0" width="47" height="32" uuid="4752747b-8a9c-42f2-96d6-929457b22792">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="42330742-ee5f-4da2-be46-d17fa10e49d4"/>
+				</reportElement>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.text.SimpleDateFormat("HH:mm").format($F{let.linija.vrijemePolaska})]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="485" y="0" width="69" height="32" uuid="d81bf9c3-3e3f-41b8-b085-4cd2f15b3424">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="8ad3bc0f-771f-4b5f-969b-76277f9f9206"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{cijena} +"E"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="280" y="0" width="48" height="32" uuid="255e6f62-38a2-4ca6-ab8b-6985d2ba5070">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="9ef2dd4c-db11-425b-89b1-badb40a775f6"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA["("+$F{let.linija.aerodrom1.kod}+")"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="377" y="0" width="48" height="32" uuid="a148e336-2d96-426d-b832-88ea69afbba9">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="d93fc8c8-cac6-40c3-a1e8-991edc438a40"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA["("+$F{let.linija.aerodrom2.kod}+")"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="328" y="0" width="49" height="32" uuid="d32dee11-74ba-4cd1-b6f6-578a69bb65f8">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="492a2075-14b0-4906-aa11-6c285af4736d"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.text.SimpleDateFormat("HH:mm").format($F{let.linija.vrijemeDolaska})]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="10" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="55" splitType="Stretch">
+			<textField>
+				<reportElement x="230" y="10" width="100" height="30" uuid="f814e869-c61f-4fcb-b755-99cea86920a7"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
